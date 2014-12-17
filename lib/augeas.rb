@@ -81,7 +81,7 @@ class Augeas
         lens = hash[:lens]
         name = hash[:name]
         incl = hash[:incl]
-        excl = hash[:excl] || ""
+        excl = hash[:excl] || []
         raise ArgumentError, "No lens specified" unless lens
         raise ArgumentError, "No files to include" unless incl
         name = lens.split(".")[0].sub("@", "") unless name
